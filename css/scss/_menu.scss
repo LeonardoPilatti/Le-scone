@@ -1,0 +1,47 @@
+.menu {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    @include d(s){
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.menu-item {
+    margin-bottom: 60px;
+    h2 {
+       @include tipo-2(24);
+       margin-bottom: 1em;
+    }
+    li {
+        @include tipo-1(18);
+        line-height: em(35, 18);
+        span {
+            font-family: $font-2;
+            color: $bege-escuro;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: right;
+            width: 70px;
+            margin-left: -80px;  /// para colocar ele alinhado a esquerda, 80 pq eh o margin-right mais o width
+            @include d(s){
+                margin-left: 0px;
+                width: auto;
+            }
+        }
+    }
+    img {
+        border-radius: 50%;  // para colocar a imagem em circulo;
+        border: 10px solid $bege-medio;
+        position: absolute;  //para poder posicionar ela onde eu quiser
+        margin-top: 50px;
+        right: 0px;  //para ele ir para a direita
+        @include d(l){
+            right: 120px;
+        }
+        @include d(s){
+            width: 120px;
+            margin-top: 0px;
+        }
+    }
+}
